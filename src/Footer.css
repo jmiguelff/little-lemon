@@ -1,0 +1,23 @@
+footer {
+    background-color: #495E57;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.footer-nav-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    padding: 5px 0;
+    margin: 0;
+}
+
+
