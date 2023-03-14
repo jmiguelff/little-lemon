@@ -1,5 +1,5 @@
 import './Header.css'
-import Nav from '../navbar/Nav';
+import Nav from '../navbar/Nav'
 import logo from '../../assets/Logo.svg'
 
 function Header() {

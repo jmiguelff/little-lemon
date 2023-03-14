@@ -6,12 +6,12 @@ function Nav() {
     <>
       <nav className='nav'>
         <ul className='navbar'>
-          <li><Link to="/" >home</Link></li>
-          <li><Link to="/about" >about</Link></li>
-          <li><Link to="/menu" >menu</Link></li>
-          <li><Link to="/reservations" >reservations</Link></li>
-          <li><Link to="/order" >order online</Link></li>
-          <li><Link to="/login" >login</Link></li>
+          <li><Link to="/" >Home</Link></li>
+          <li><Link to="/about" >About</Link></li>
+          <li><Link to="/menu" >Menu</Link></li>
+          <li><Link to="/reservations" >Reservations</Link></li>
+          <li><Link to="/order" >Order Online</Link></li>
+          <li><Link to="/login" >Login</Link></li>
         </ul>
       </nav>
     </>

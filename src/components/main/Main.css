@@ -1,0 +1,8 @@
+.specials-banner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.specials-title {
+    font-size: 2rem;
+}
