@@ -1,6 +1,10 @@
 .nav {
-  background-color: #333;
-  color: white;
+  background-color: white;
+  color: #333333;
+  font-family: 'Karla';
+  font-size: 1.125rem;
+  font-weight: 800;
+
   display: flex;
   justify-content: space-between;
   align-items: stretch;
@@ -25,10 +29,11 @@
   padding: 0.25rem;
 }
 
-.nav li.active {
-  background-color: #555;
+.nav a.active {
+  /*background-color: #edefee;*/
+  color:black
 }
 
-.nav li:hover {
-  background-color: #777;
+.nav a:hover {
+  background-color: #fbdabb;
 }

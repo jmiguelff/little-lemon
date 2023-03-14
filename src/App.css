@@ -1,3 +1,20 @@
+@font-face {
+  font-family: 'Marzaki';
+  src: url('./assets/MarkaziText-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Karla';
+  src: url('./assets/Karla-VariableFont_wght.ttf') format('truetype');
+}
+
+:root {
+  --font-size-base: clamp(0.75rem, 0.34vw + 0.7rem, 0.875rem);
+
+  --accent: 124, 58, 237;
+  --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+}
+
 *,
 *::before,
 *::after {
@@ -10,9 +27,6 @@ img {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
