@@ -1,24 +1,83 @@
 @font-face {
   font-family: 'Marzaki';
+  font-display: swap;
   src: url('./assets/MarkaziText-VariableFont_wght.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Karla';
+  font-display: swap;
   src: url('./assets/Karla-VariableFont_wght.ttf') format('truetype');
 }
 
 :root {
-  --font-size-base: clamp(0.75rem, 0.34vw + 0.7rem, 0.875rem);
+  --clr-primary-hsl-dark: 160, 13%, 33%;
+  --clr-primary-hsl-light: 50, 91%, 52%;
+  --clr-primary-hsl-light-2: 20, 91%, 52%;
 
-  --accent: 124, 58, 237;
-  --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+  --clr-secondary-hsl-dark: 19, 78%, 69%;
+  --clr-secondary-hsl-light: 29, 89%, 86%;
+
+  --clr-highlight-hsl-dark: 0, 0%, 20%;
+  --clr-highlight-hsl-light: 150, 6%, 93%;
+
+  --clr-primary-dark: hsl(var(--clr-highlight-hsl-dark));
+  --clr-primary-light: hsl(var(--clr-primary-hsl-light));
+  --clr-primary-light-2: hsl(var(--clr-primary-hsl-light-2));
+
+  --clr-secondary-dark: hsl(var(--clr-secondary-hsl-dark));
+  --clr-secondary-light: hsl(var(--clr-secondary-hsl-light));
+
+  --clr-highlight-dark: hsl(var(--clr-highlight-hsl-dark));
+  --clr-highlight-light: hsl(var(--clr-highlight-hsl-light));
+
+  --gradient-primary: linear-gradient(
+    var(--clr-primary-light),
+    var(--clr-secondary-light));
+
+  --clr-primary-hsl-400: 252, 100%, 67%;
+  --clr-primary-hsl-500: 256, 72%, 46%;
+  --clr-secondary-hsl-400: 241, 81%, 54%;
+  --clr-secondary-hsl-500: 241, 72%, 46%;
+
+  --clr-neutral-hsl-100: 0, 0%, 100%;
+  --clr-neutral-hsl-200: 221, 100%, 96%;
+  --clr-neutral-hsl-300: 241, 100%, 89%;
+  --clr-neutral-hsl-700: 224, 30%, 27%;
+
+  --clr-neutral-100: hsl(var(--clr-neutral-hsl-100));
+  --clr-neutral-200: hsl(var(--clr-neutral-hsl-200));
+  --clr-neutral-300: hsl(var(--clr-neutral-hsl-300));
+  --clr-neutral-700: hsl(var(--clr-neutral-hsl-700));
+
+  --clr-primary-400: hsl(var(--clr-primary-hsl-400));
+  --clr-primary-500: hsla(var(--clr-primary-hsl-500));
+  --clr-secondary-400: hsl(var(--clr-secondary-hsl-400));
+
+  --font-family-default: 'Karla', sans-serif;
+
+  --fw-regular: 500;
+  --fw-bold: 700;
+  --fw-black: 800;
+
+  --fs-300: 1rem;
+  --fs-400: 1.125rem;
+  --fs-500: 1.25rem;
+  --fs-600: 1.5rem;
+  --fs-700: 1.75rem;
+  --fs-800: 3rem;
+  --fs-900: 5rem;
 }
 
 *,
 *::before,
 *::after {
     box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  font: inherit;
 }
 
 img {
@@ -29,11 +88,10 @@ img {
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: var(--font-family-default);
+  font-size: var(--fs-300);
+  color: var(--clr-neutral-700);
 }
 
 menu:not(article menu),

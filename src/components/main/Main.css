@@ -1,8 +1,23 @@
+.main-section {
+    margin-top: 2rem;
+    background-color: white;
+    width: 100%;
+}
+
 .specials-banner {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 60px 0;
+    gap: 3rem;
 }
 
 .specials-title {
-    font-size: 2rem;
+    font-family: 'Marzaki';
+    font-weight: var(--fw-black);
+    font-size: var(--fs-800);
+    color: var(--clr-highlight-dark);
 }

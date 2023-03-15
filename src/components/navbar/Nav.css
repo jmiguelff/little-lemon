@@ -1,10 +1,8 @@
 .nav {
   background-color: white;
-  color: #333333;
-  font-family: 'Karla';
-  font-size: 1.125rem;
-  font-weight: 800;
-
+  color: var(--clr-highlight-dark);
+  font-size: var(--fs-400);
+  font-weight: var(--fw-bold);
   display: flex;
   justify-content: space-between;
   align-items: stretch;
@@ -35,5 +33,5 @@
 }
 
 .nav a:hover {
-  background-color: #fbdabb;
+  background-color: var(--clr-highlight-light);
 }

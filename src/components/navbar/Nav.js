@@ -5,32 +5,32 @@ const Links = [
   {
     name: "Home",
     path: "/",
-    id: "Home"
+    id: 1
   },
   {
     name: "About",
     path: "/about",
-    id: "about"
+    id: 2
   },
   {
     name: "Menu",
     path: "/menu",
-    id: "menu"
+    id: 3
   },
   {
     name: "Reservations",
     path: "/reservations",
-    id: "reservations"
+    id: 4
   },
   {
     name: "Order Online",
     path: "/order",
-    id: "order"
+    id: 5
   },
   {
     name: "Login",
     path: "/login",
-    id: "login"
+    id: 6
   }
 ]
 
@@ -40,9 +40,8 @@ function Nav() {
       <nav className='nav'>
         <ul className='navbar'>
           {Links.map((link) => (
-            <li>
+            <li key={link.id}>
               <NavLink
-                key={link.id}
                 to={link.path}
                 className={({ isActive }) => (isActive ? 'active' : 'inactive')}
               >

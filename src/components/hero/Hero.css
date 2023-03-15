@@ -7,10 +7,10 @@
     display: flex;
     justify-content: space-between;
     width: 75%;
-    max-width: 800px;
+    max-width: 50rem;
     margin: 0 auto;
     padding: 60px 0;
-    gap: 2rem;
+    gap: 3rem;
 }
 
 .hero-section-left {
@@ -47,6 +47,25 @@
 }
 
 .btn {
+    color: var(--clr-highlight-dark);
+    line-height: 1;
+    background: var(--clr-primary-light);
+    padding: 1rem 2rem;
+    border: 0;
+    border-radius: 100vw;
+    cursor: pointer;
+
+    font-size: var(--fs-400);
+    font-weight: var(--fw-bold);
+  }
+
+.btn:hover,
+.btn:focus-visible {
+    background: var(--gradient-primary);
+}
+
+/*
+.btn {
     color:black;
     font-family: 'Karla';
     font-style: normal;
@@ -57,14 +76,15 @@
     border-radius: 1.125rem;
     border: transparent;
     padding: 12px 23px;
-}
+}*/
 
+/*
 .btn:hover {
     cursor: pointer;
     background-color: #333333;
     color: #F4CE14;
     transition: 0.2s;
-}
+}*/
 
 .hero-section-right {
     width: 50%;
