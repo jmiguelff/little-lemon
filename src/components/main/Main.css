@@ -1,5 +1,5 @@
 .main-section {
-    margin-top: 2rem;
+    margin: 2rem 0;
     background-color: white;
     width: 100%;
 }
@@ -20,4 +20,12 @@
     font-weight: var(--fw-black);
     font-size: var(--fs-800);
     color: var(--clr-highlight-dark);
+}
+
+.specials-cards-container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 50rem;
+    gap: 2rem;
 }

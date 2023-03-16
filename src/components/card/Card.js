@@ -1,3 +1,4 @@
+import './Card.css'
 import { NavLink } from "react-router-dom";
 
 function Card(props) {
@@ -7,7 +8,7 @@ function Card(props) {
         <img src={props.image} alt={props.alt} />
       </div>
       <div className="title-container">
-        <h2 className="card-title">{props.title}</h2>
+        <h3 className="card-title">{props.title}</h3>
         <p className="card-price">{props.price}</p>
       </div>
       <div className="description-container">
