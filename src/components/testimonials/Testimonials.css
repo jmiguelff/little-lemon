@@ -1,0 +1,27 @@
+.testimonials-section {
+    padding: 4rem;
+    background-color: var(--clr-secondary-dark);
+    width: 100%;
+}
+
+.testimonials-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonials-title {
+    font-family: 'Marzaki';
+    font-weight: var(--fw-black);
+    font-size: var(--fs-800);
+    color: var(--clr-highlight-dark);
+
+    margin-bottom: 2rem;
+}
+
+.review-cards-container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
