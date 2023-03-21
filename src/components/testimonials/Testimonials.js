@@ -9,7 +9,7 @@ const Reviews = [
   {
     id: 1,
     rating: "4",
-    name: "Helena",
+    name: "Helena Santos",
     image: HelenaImg,
     review: "Best Greek Salad ever. Everyone was super nice.",
   },
@@ -32,7 +32,7 @@ const Reviews = [
     rating: "5",
     name: "Harry Houdini",
     image: HarryImg,
-    review: "I've tried all the dishes, they are all incredible. It's my favorite restaurante.",
+    review: "I've tried all the dishes, they are all incredible. It's my favorite restaurant.",
   }
 
 ]
