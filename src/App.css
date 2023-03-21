@@ -21,7 +21,7 @@
   --clr-highlight-hsl-dark: 0, 0%, 20%;
   --clr-highlight-hsl-light: 150, 6%, 93%;
 
-  --clr-primary-dark: hsl(var(--clr-highlight-hsl-dark));
+  --clr-primary-dark: hsl(var(--clr-primary-hsl-dark));
   --clr-primary-light: hsl(var(--clr-primary-hsl-light));
   --clr-primary-light-2: hsl(var(--clr-primary-hsl-light-2));
 

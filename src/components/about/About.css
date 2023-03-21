@@ -1,0 +1,73 @@
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 60px 0;
+    gap: 4rem;
+    margin-bottom: 3rem;
+}
+
+.about-left {
+    width: 100%;
+    padding: 0 auto;
+}
+
+.about-left h2 {
+    font-family: 'Marzaki';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 4rem;
+    color: var(--clr-primary-dark);
+    line-height: 0.8;
+    margin-bottom: 0.5rem;
+}
+
+.about-left h3 {
+    font-family: 'Marzaki';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3rem;
+    color: var(--clr-primary-light);
+    line-height: 0.9;
+}
+
+.about-content {
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--clr-highlight-dark);
+    margin: 15px 0;
+}
+
+.first-letter {
+    font-weight: var(--fw-bold);
+}
+
+.about-right {
+    width: 100%;
+    height: auto;
+}
+
+.image-container {
+    position: relative;
+}
+
+.background-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.overlay-image {
+    position: absolute;
+    top: 10rem;
+    left: 5rem;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    opacity: 1; /* Set the opacity of the overlay image */
+}
