@@ -16,13 +16,14 @@
     font-weight: var(--fw-black);
     font-size: var(--fs-800);
     color: var(--clr-highlight-dark);
-
     margin-bottom: 2rem;
 }
 
 .review-cards-container {
     margin: 0 auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 70rem;
 }

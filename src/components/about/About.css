@@ -40,7 +40,12 @@
     font-weight: 400;
     font-size: 1rem;
     color: var(--clr-highlight-dark);
-    margin: 15px 0;
+    margin: 1rem 0;
+    line-height: 2.4ch;
+}
+
+.about-content p {
+    padding: 0.3rem 0;
 }
 
 .first-letter {
@@ -54,6 +59,7 @@
 
 .image-container {
     position: relative;
+    width: 80%;
 }
 
 .background-image {

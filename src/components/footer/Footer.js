@@ -7,7 +7,7 @@ function Footer() {
       <footer>
         <div className='footer-container'>
           <section className='footer-logo'>
-            <img src={logo} alt="logo" width='100px'></img>
+            <img src={logo} alt="logo"></img>
           </section>
           <section className='footer-nav'>
             <nav>

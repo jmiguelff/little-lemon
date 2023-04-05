@@ -97,16 +97,20 @@ body {
 menu:not(article menu),
 ol:not(article ol),
 ul:not(article ul) {
-    list-style: none;
+  list-style: none;
 }
 
 menu,
 ol,
 ul {
-    padding-left: 0;
+  padding-left: 0;
 }
 
 article ol,
 article ul {
-    list-style-position: inside;
+  list-style-position: inside;
+}
+
+a {
+  text-decoration: none;
 }
