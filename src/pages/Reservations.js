@@ -1,3 +1,15 @@
-export default function Reservations() {
-    return <h1>Reserve a table</h1>
+import Header from '../components/header/Header';
+import Footer from '../components/footer/Footer';
+import ReservationForm from '../components/reserveForm/ReservationForm'
+
+function Reservations() {
+  return (
+    <>
+      <Header />
+      <ReservationForm />
+      <Footer />
+    </>
+  );
 }
+
+export default Reservations;

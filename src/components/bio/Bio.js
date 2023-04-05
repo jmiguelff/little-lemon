@@ -1,8 +1,8 @@
-import "./About.css"
+import "./Bio.css"
 import ImageA from "../../assets/aboutA.jpg"
 import ImageB from "../../assets/aboutB.jpeg"
 
-function About() {
+function Bio() {
   return (
     <>
       <section>
@@ -28,4 +28,4 @@ function About() {
   )
 }
 
-export default About;
+export default Bio;
