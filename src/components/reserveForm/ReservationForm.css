@@ -1,0 +1,30 @@
+.reserve-step-1 {
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.reserve-title {
+    font-family: 'Marzaki';
+    font-weight: var(--fw-black);
+    font-size: var(--fs-800);
+    color: var(--clr-highlight-dark);
+    padding-bottom: 10rem;
+}
+
+.left-container {
+    max-width: 50%;
+}
+
+.reserve-form {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 2em 2em 2em 2em;
+}
+
+.right-image {
+    max-width: 500px;
+}
