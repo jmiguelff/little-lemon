@@ -1,12 +1,12 @@
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
-import BookingMain from '../components/bookingMain/BookingMain';
+import ConfirmationBooking from '../components/confirmation/ConfirmationBooking';
 
 function BookingPage() {
   return (
     <>
       <Header />
-      <BookingMain />
+      <ConfirmationBooking />
       <Footer />
     </>
   );

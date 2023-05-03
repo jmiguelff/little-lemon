@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 
-function BookingForm({ availableTimes, getAvailableTimes }) {
+function BookingForm({ availableTimes, getAvailableTimes, submit }) {
 
   const initialValues = {
     date: '',
@@ -12,6 +12,14 @@ function BookingForm({ availableTimes, getAvailableTimes }) {
 
   const [formValues, setFormValues] = useState(initialValues);
 
+  const dateHandleChange = (e) => {
+    setFormValues({
+      ...formValues,
+      [e.target.name]: e.target.value
+    });
+    getAvailableTimes(e.target.value)
+  }
+
   const handleChange = (e) => {
     setFormValues({
       ...formValues,
@@ -19,32 +27,22 @@ function BookingForm({ availableTimes, getAvailableTimes }) {
     });
   };
 
-  const clearForm = () => {
-    setFormValues({
-      date: '',
-      time: '',
-      guestsNumber: '',
-      occasion: ''
-    })
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    // alert(JSON.stringify(formValues, null, 2));
-    getAvailableTimes(formValues.time)
-    clearForm();
+    submit(formValues);
+    //alert(JSON.stringify(formValues, null, 2));
   }
 
   return (
     <form onSubmit={handleSubmit} style={{ display: "grid", maxWidth: "200px", gap: "20px" }}>
       <label htmlFor="res-date">Choose date</label>
-      <input type="date" id="res-date" name="date" value={formValues.date} onChange={handleChange} />
+      <input type="date" data-testid="date-input" id="res-date" name="date" value={formValues.date} onChange={dateHandleChange} />
 
       <label htmlFor="res-time">Choose time</label>
       <select data-testid="select-option" id="res-time" name="time" value={formValues.time} onChange={handleChange}>
         {availableTimes.map(time => {
           return (
-            <option data-testid="option" key={time.slot} value={time.value}>{time.value}</option>
+            <option data-testid="option" key={time} value={time}>{time}</option>
           )
         })}
       </select>

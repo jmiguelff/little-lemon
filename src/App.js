@@ -4,9 +4,10 @@ import Home from "./pages/Home"
 import About from "./pages/About"
 import Menu from "./pages/Menu"
 //import Reservations from "./pages/Reservations"
-import BookingPage from './pages/BookingPage';
+import BookingPage from './pages/BookingPage'
 import OrderOnline from "./pages/OrderOnline"
 import Login from "./pages/Login"
+import ConfirmationPage from "./pages/ConfirmationPage"
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Route path="/reservations" element={<BookingPage />} />
       <Route path="/order" element={<OrderOnline />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/confirmation" element={<ConfirmationPage />} />
     </Routes>
   );
 }
