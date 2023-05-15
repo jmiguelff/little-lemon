@@ -39,7 +39,7 @@ const initializeTimes = () => {
 const updateTimes = (availableTimes, action) => {
   switch (action.type) {
     case 'book': {
-      // console.log("Update avi times for date: " + action.value)
+      //console.log("Update avi times for date: " + action.value)
       return availableTimes = fetchAPI(action.value)
     }
     default: {
@@ -59,16 +59,15 @@ function BookingMain() {
   }
 
   const dispatchReservation = (date) => {
-    let myDate = new Date(date)
     // @ts-ignore
     dispatch({
       type: 'book',
-      value: myDate
+      value: date
     })
   }
 
   return (
-    <BookingForm availableTimes={state} getAvailableTimes={dispatchReservation} submit={submitForm} />
+    <BookingForm availableTimes={state} getAvailableTimes={dispatchReservation} apiSubmit={submitForm} />
   )
 }
 
