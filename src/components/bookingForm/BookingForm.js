@@ -1,6 +1,7 @@
 import { Form, Formik, useField } from "formik";
 import * as Yup from 'yup';
 import styled from "@emotion/styled";
+import './BookingForm.css'
 
 const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
 
@@ -84,7 +85,7 @@ function BookingForm({ availableTimes, getAvailableTimes, apiSubmit }) {
   today.setHours(0, 0, 0, 0);
 
   return (
-    <>
+    <div className="form-wrapper">
       <h2>Book a Table!</h2>
       <Formik
         initialValues={{
@@ -128,80 +129,94 @@ function BookingForm({ availableTimes, getAvailableTimes, apiSubmit }) {
             .required('Phone number is required')
         })}
       >
-        <Form style={{ display: "grid", maxWidth: "200px", gap: "20px" }}>
-          <DateInput
-            data-testid="date-input"
-            label="Choose a Date"
-            name="date"
-            type="date"
-            id="date"
-            updateTimes={getAvailableTimes}
-          />
+        <Form>
+          <div className="input-wrapper">
+            <DateInput
+              data-testid="date-input"
+              label="Choose a Date"
+              name="date"
+              type="date"
+              id="date"
+              updateTimes={getAvailableTimes}
+            />
+          </div>
 
-          <CustomSelect
-            data-testid="time-input"
-            label="Choose a Time"
-            name="time"
-            id="time"
-            className="timeSelect"
-          >
-            {availableTimes.map(timeOption => {
-              return (
-                <option data-testid="time-opt-input" key={timeOption} value={timeOption}>{timeOption}</option>
-              )
-            })}
-          </CustomSelect>
+          <div className="input-wrapper">
+            <CustomSelect
+              data-testid="time-input"
+              label="Choose a Time"
+              name="time"
+              id="time"
+              className="timeSelect"
+            >
+              {availableTimes.map(timeOption => {
+                return (
+                  <option data-testid="time-opt-input" key={timeOption} value={timeOption}>{timeOption}</option>
+                )
+              })}
+            </CustomSelect>
+          </div>
 
-          <BasicInput
-            label="Number of Guests"
-            type="number"
-            placeholder="1"
-            min="1"
-            max="10"
-            name="guestsNumber"
-            id="guestsNumber"
-            className="nbrGuests"
-          />
+          <div className="input-wrapper">
+            <BasicInput
+              label="Number of Guests"
+              type="number"
+              placeholder="1"
+              min="1"
+              max="10"
+              name="guestsNumber"
+              id="guestsNumber"
+              className="nbrGuests"
+            />
+          </div>
 
-          <CustomSelect
-            data-testid="occasion-input"
-            label="Choose an Occasion"
-            name="occasion"
-            id="occasion"
-            className="occasionSelect"
-          >
-            <option value={"birthday"}>Birthday</option>
-            <option value={"anniversary"}>Anniversary</option>
-          </CustomSelect>
+          <div className="input-wrapper">
+            <CustomSelect
+              data-testid="occasion-input"
+              label="Choose an Occasion"
+              name="occasion"
+              id="occasion"
+              className="occasionSelect"
+            >
+              <option value={"birthday"}>Birthday</option>
+              <option value={"anniversary"}>Anniversary</option>
+            </CustomSelect>
+          </div>
 
-          <BasicInput
-            label="Name"
-            type="text"
-            name="name"
-            id="name"
-            className="nameInput"
-          />
+          <div className="input-wrapper">
+            <BasicInput
+              label="Name"
+              type="text"
+              name="name"
+              id="name"
+              className="nameInput"
+            />
+          </div>
 
-          <BasicInput
-            label="Email Address"
-            type="email"
-            name="email"
-            id="email"
-            className="emailInput"
-          />
+          <div className="input-wrapper">
+            <BasicInput
+              label="Email Address"
+              type="email"
+              name="email"
+              id="email"
+              className="emailInput"
+            />
+          </div>
 
-          <BasicInput
-            label="Phone Number"
-            type="number"
-            name="phoneNumber"
-            id="phoneNumber"
-            className="phoneNumberInput"
-          />
+          <div className="input-wrapper">
+            <BasicInput
+              label="Phone Number"
+              type="number"
+              name="phoneNumber"
+              id="phoneNumber"
+              className="phoneNumberInput"
+            />
+          </div>
 
           <button type="submit">Make Your Reservation</button>
         </Form>
       </Formik>
-    </>
+    </div>
   );
 };
 
