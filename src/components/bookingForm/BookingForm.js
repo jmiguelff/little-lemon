@@ -5,6 +5,20 @@ import './BookingForm.css'
 
 const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
 
+const StyledErrorMessage = styled.div`
+  font-size: 12px;
+  color: var(--red-600);
+  width: 400px;
+  margin-top: 0.25rem;
+  &:before {
+    content: "❌  ";
+    font-size: 10px;
+  }
+  @media (prefers-color-scheme: dark) {
+    color: var(--red-300);
+  }
+`;
+
 const DateInput = ({ label, updateTimes, ...props }) => {
   const [field, meta] = useField(props);
   return (
@@ -20,7 +34,7 @@ const DateInput = ({ label, updateTimes, ...props }) => {
         }}
       />
       {meta.touched && meta.error ? (
-        <div className="error">{meta.error}</div>
+        <StyledErrorMessage>{meta.error}</StyledErrorMessage>
       ) : null}
     </>
   );
@@ -36,34 +50,11 @@ const BasicInput = ({ label, ...props }) => {
         {...props}
       />
       {meta.touched && meta.error ? (
-        <div className="error">{meta.error}</div>
+        <StyledErrorMessage>{meta.error}</StyledErrorMessage>
       ) : null}
     </>
   );
 };
-
-// Styled components ....
-const StyledSelect = styled.select`
-  color: var(--blue);
-`;
-
-const StyledErrorMessage = styled.div`
-  font-size: 12px;
-  color: var(--red-600);
-  width: 400px;
-  margin-top: 0.25rem;
-  &:before {
-    content: "❌ ";
-    font-size: 10px;
-  }
-  @media (prefers-color-scheme: dark) {
-    color: var(--red-300);
-  }
-`;
-
-const StyledLabel = styled.label`
-  margin-top: 1rem;
-`;
 
 const CustomSelect = ({ label, ...props }) => {
   // useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
@@ -71,8 +62,8 @@ const CustomSelect = ({ label, ...props }) => {
   const [field, meta] = useField(props);
   return (
     <>
-      <StyledLabel htmlFor={props.id || props.name}>{label}</StyledLabel>
-      <StyledSelect {...field} {...props} />
+      <label htmlFor={props.id || props.name}>{label}</label>
+      <select {...field} {...props} />
       {meta.touched && meta.error ? (
         <StyledErrorMessage>{meta.error}</StyledErrorMessage>
       ) : null}
@@ -122,7 +113,7 @@ function BookingForm({ availableTimes, getAvailableTimes, apiSubmit }) {
           email: Yup
             .string()
             .email('Invalid email address')
-            .required('At least one type of contact information is required'),
+            .required('E-mail information is required'),
           phoneNumber: Yup
             .string()
             .matches(phoneRegExp, 'Phone number is not valid')
@@ -186,6 +177,7 @@ function BookingForm({ availableTimes, getAvailableTimes, apiSubmit }) {
           <div className="input-wrapper">
             <BasicInput
               label="Name"
+              placeholder="First or Full Name"
               type="text"
               name="name"
               id="name"
@@ -196,6 +188,7 @@ function BookingForm({ availableTimes, getAvailableTimes, apiSubmit }) {
           <div className="input-wrapper">
             <BasicInput
               label="Email Address"
+              placeholder="name@example.com"
               type="email"
               name="email"
               id="email"
@@ -206,7 +199,7 @@ function BookingForm({ availableTimes, getAvailableTimes, apiSubmit }) {
           <div className="input-wrapper">
             <BasicInput
               label="Phone Number"
-              type="number"
+              type="text"
               name="phoneNumber"
               id="phoneNumber"
               className="phoneNumberInput"
@@ -220,65 +213,4 @@ function BookingForm({ availableTimes, getAvailableTimes, apiSubmit }) {
   );
 };
 
-/*
-function BookingForm2({ availableTimes, getAvailableTimes, submit }) {
-
-  const initialValues = {
-    date: '',
-    time: '',
-    guestsNumber: '',
-    occasion: ''
-  };
-
-  const [formValues, setFormValues] = useState(initialValues);
-
-  const dateHandleChange = (e) => {
-    setFormValues({
-      ...formValues,
-      [e.target.name]: e.target.value
-    });
-    getAvailableTimes(new Date(e.target.value))
-  }
-
-  const handleChange = (e) => {
-    setFormValues({
-      ...formValues,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    submit(formValues);
-    //alert(JSON.stringify(formValues, null, 2));
-  }
-
-  return (
-    <form onSubmit={handleSubmit} style={{ display: "grid", maxWidth: "200px", gap: "20px" }}>
-      <label htmlFor="res-date">Choose date</label>
-      <input type="date" data-testid="date-input" id="res-date" name="date" value={formValues.date} onChange={dateHandleChange} />
-
-      <label htmlFor="res-time">Choose time</label>
-      <select data-testid="select-option" id="res-time" name="time" value={formValues.time} onChange={handleChange}>
-        {availableTimes.map(time => {
-          return (
-            <option data-testid="option" key={time} value={time}>{time}</option>
-          )
-        })}
-      </select>
-
-      <label htmlFor="guests">Number of guests</label>
-      <input type="number" placeholder="1" min="1" max="10" id="guests" name="guestsNumber" value={formValues.guestsNumber} onChange={handleChange} />
-
-      <label htmlFor="occasion">Occasion</label>
-      <select id="occasion" name="occasion" value={formValues.occasion} onChange={handleChange}>
-        <option value={"birthday"}>Birhday</option>
-        <option value={"anniversary"}>Anniversary</option>
-      </select>
-
-      <button type="submit">Make Your Reservation</button>
-    </form>
-  )
-}
-*/
 export default BookingForm;

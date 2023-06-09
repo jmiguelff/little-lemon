@@ -55,6 +55,7 @@
   --clr-secondary-400: hsl(var(--clr-secondary-hsl-400));
 
   --font-family-default: 'Karla', sans-serif;
+  --font-family-title: 'Marzaki', sans-serif;
 
   --fw-regular: 500;
   --fw-bold: 700;

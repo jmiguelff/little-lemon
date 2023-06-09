@@ -1,6 +1,8 @@
 import { useReducer } from "react";
 import { useNavigate } from "react-router-dom";
 import BookingForm from "../bookingForm/BookingForm";
+import './BookingMain.css'
+import RestImg from "../../assets/restaurant.jpg"
 
 const seededRandom = function (seed) {
   var m = 2 ** 35 - 31;
@@ -67,7 +69,20 @@ function BookingMain() {
   }
 
   return (
-    <BookingForm availableTimes={state} getAvailableTimes={dispatchReservation} apiSubmit={submitForm} />
+    <div className="flex-wrapper">
+      <div className="left-side" style={
+        {
+          backgroundImage: `url(${RestImg})`,
+          WebkitBackgroundSize: "cover",
+          backgroundSize: "cover"
+        }
+      }>
+      </div>
+      <div className="right-side">
+        <BookingForm availableTimes={state} getAvailableTimes={dispatchReservation} apiSubmit={submitForm} />
+      </div>
+    </div>
+
   )
 }
 

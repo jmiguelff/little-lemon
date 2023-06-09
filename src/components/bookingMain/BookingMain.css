@@ -1,0 +1,15 @@
+.flex-wrapper {
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+
+.left-side {
+    width: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100%;
+}
+
+.right-side {
+    width: 50%;
+}
