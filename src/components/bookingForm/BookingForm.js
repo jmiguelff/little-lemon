@@ -150,6 +150,7 @@ function BookingForm({ availableTimes, getAvailableTimes, apiSubmit }) {
 
           <div className="input-wrapper">
             <BasicInput
+              data-testid="guests-input"
               label="Number of Guests"
               type="number"
               placeholder="1"
@@ -176,6 +177,7 @@ function BookingForm({ availableTimes, getAvailableTimes, apiSubmit }) {
 
           <div className="input-wrapper">
             <BasicInput
+              data-testid="name-input"
               label="Name"
               placeholder="First or Full Name"
               type="text"
@@ -187,6 +189,7 @@ function BookingForm({ availableTimes, getAvailableTimes, apiSubmit }) {
 
           <div className="input-wrapper">
             <BasicInput
+              data-testid="email-input"
               label="Email Address"
               placeholder="name@example.com"
               type="email"
@@ -198,6 +201,7 @@ function BookingForm({ availableTimes, getAvailableTimes, apiSubmit }) {
 
           <div className="input-wrapper">
             <BasicInput
+              data-testid="phone-input"
               label="Phone Number"
               type="text"
               name="phoneNumber"
@@ -206,7 +210,7 @@ function BookingForm({ availableTimes, getAvailableTimes, apiSubmit }) {
             />
           </div>
 
-          <button type="submit">Make Your Reservation</button>
+          <button name="submit" type="submit">Make Your Reservation</button>
         </Form>
       </Formik>
     </div>
