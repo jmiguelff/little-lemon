@@ -128,6 +128,7 @@ function BookingForm({ availableTimes, getAvailableTimes, apiSubmit }) {
               name="date"
               type="date"
               id="date"
+              aria-required="true"
               updateTimes={getAvailableTimes}
             />
           </div>
@@ -138,6 +139,7 @@ function BookingForm({ availableTimes, getAvailableTimes, apiSubmit }) {
               label="Choose a Time"
               name="time"
               id="time"
+              aria-required="true"
               className="timeSelect"
             >
               {availableTimes.map(timeOption => {
@@ -158,6 +160,7 @@ function BookingForm({ availableTimes, getAvailableTimes, apiSubmit }) {
               max="10"
               name="guestsNumber"
               id="guestsNumber"
+              aria-required="true"
               className="nbrGuests"
             />
           </div>
@@ -183,6 +186,7 @@ function BookingForm({ availableTimes, getAvailableTimes, apiSubmit }) {
               type="text"
               name="name"
               id="name"
+              aria-required="true"
               className="nameInput"
             />
           </div>
@@ -195,6 +199,7 @@ function BookingForm({ availableTimes, getAvailableTimes, apiSubmit }) {
               type="email"
               name="email"
               id="email"
+              aria-required="true"
               className="emailInput"
             />
           </div>
@@ -206,11 +211,12 @@ function BookingForm({ availableTimes, getAvailableTimes, apiSubmit }) {
               type="text"
               name="phoneNumber"
               id="phoneNumber"
+              aria-required="true"
               className="phoneNumberInput"
             />
           </div>
 
-          <button name="submit" type="submit">Make Your Reservation</button>
+          <button aria-label="On Click" name="submit" type="submit">Make Your Reservation</button>
         </Form>
       </Formik>
     </div>
