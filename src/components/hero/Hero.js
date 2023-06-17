@@ -18,7 +18,7 @@ function Hero() {
         </div>
         <div className="hero-section-right">
           <div className="hero-image">
-            <img src={HeroImage} alt="Delicious food from Little Lemon." />
+            <img src={HeroImage} alt="Delicious food from Little Lemon." loading="lazy" />
           </div>
         </div>
       </div>

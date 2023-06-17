@@ -18,8 +18,8 @@ function Bio() {
           </div>
           <div className='about-right'>
             <div className="image-container">
-              <img className="background-image" src={ImageA} alt="Mario and Adrian Cooking" />
-              <img className="overlay-image" src={ImageB} alt="Mario and Adrian Laughing" />
+              <img className="background-image" src={ImageA} alt="Mario and Adrian Cooking" loading="lazy" />
+              <img className="overlay-image" src={ImageB} alt="Mario and Adrian Laughing" loading="lazy" />
             </div>
           </div>
         </div>

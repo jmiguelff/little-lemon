@@ -11,7 +11,7 @@ function Review(props) {
       </div>
       <div className="customer-container">
         <div className="customer-image">
-          <img src={props.img} alt="Customer portrait"></img>
+          <img src={props.img} alt="Customer portrait" loading="lazy"></img>
         </div>
         <div className="customer-name">
           <p>{props.name}</p>

@@ -1,0 +1,39 @@
+.confirmation-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+
+    min-height: 10rem;
+}
+
+.confirmation-container > h2 {
+    font-family: 'Marzaki';
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-800);
+    color: var(--clr-primary-dark);
+    line-height: 0.8;
+    margin-bottom: 3rem;
+    margin-top: 5rem;
+}
+
+.btn-container {
+    padding: 5rem;
+}
+
+.btn-container > button {
+    color: var(--clr-highlight-dark);
+    line-height: 1;
+    background: var(--clr-primary-light);
+    padding: 1rem 2rem;
+    border: 0;
+    border-radius: 100vw;
+    cursor: pointer;
+
+    font-size: var(--fs-400);
+    font-weight: var(--fw-bold);
+  }
+
+.btn-container > button:hover,
+.btn-container > button:focus-visible {
+    background: var(--gradient-primary);
+}
