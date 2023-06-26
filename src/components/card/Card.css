@@ -44,3 +44,14 @@
 .cta-container {
     padding: 0 1rem;
 }
+
+@media only screen and (device-width < 430px) {
+    .card-container {
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .description-container {
+        min-height: auto;
+    }
+}

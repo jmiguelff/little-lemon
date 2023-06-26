@@ -1,5 +1,6 @@
-import './Nav.css'
+import { useState } from 'react';
 import { NavLink } from "react-router-dom";
+import './Nav.css'
 
 const Links = [
   {
@@ -35,21 +36,39 @@ const Links = [
 ]
 
 function Nav() {
+  const [isActive, setActive] = useState(0);
+
+  const handleClick = () => {
+    if (isActive) {
+      setActive(0);
+    } else {
+      setActive(1);
+    }
+  }
+
   return (
     <>
-      <nav className='nav'>
-        <ul className='navbar'>
-          {Links.map((link) => (
-            <li key={link.id}>
-              <NavLink
-                to={link.path}
-                className={({ isActive }) => (isActive ? 'active' : 'inactive')}
-              >
-                {link.name}
-              </NavLink>
-            </li>
-          ))}
-        </ul>
+      <nav className="navbar">
+        <button className="toggle-button" onClick={handleClick}>
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </button>
+
+        <div className={isActive ? 'navbar-links active' : 'navbar-links'}>
+          <ul>
+            {Links.map((link) => (
+              <li key={link.id}>
+                <NavLink
+                  to={link.path}
+                  className={({ isActive }) => (isActive ? 'active' : 'inactive')}
+                >
+                  {link.name}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        </div>
       </nav>
     </>
   );

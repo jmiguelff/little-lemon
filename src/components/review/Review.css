@@ -63,3 +63,9 @@
     font-weight: var(--fw-regular);
     color: hsl(var(--clr-highlight-hsl-dark), 0.8);
 }
+
+@media only screen and (device-width < 430px) {
+    .review-container {
+        width: 100%;
+    }
+}

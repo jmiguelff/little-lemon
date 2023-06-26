@@ -32,3 +32,24 @@
     flex-wrap: wrap;
     padding: 0 2rem;
 }
+
+@media only screen and (device-width < 430px) {
+    .main-section {
+        margin: 0;
+        margin-bottom: 2rem;
+    }
+
+    .specials-banner {
+        gap: 0;
+        align-content: center;
+    }
+
+    .specials-banner > h2 {
+        font-size: 2rem;
+    }
+
+    .specials-cards-container {
+        gap: 2rem;
+        padding: 0;
+    }
+}

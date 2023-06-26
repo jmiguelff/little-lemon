@@ -1,6 +1,6 @@
 .flex-wrapper {
     display: flex;
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
 }
 
 .left-side {
@@ -12,4 +12,14 @@
 
 .right-side {
     width: 50%;
+}
+
+@media only screen and (device-width < 430px) {
+    .left-side {
+        display: none;
+    }
+
+    .right-side {
+        width: 100%;
+    }
 }

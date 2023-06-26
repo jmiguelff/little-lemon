@@ -27,3 +27,18 @@
     flex-wrap: wrap;
     max-width: 70rem;
 }
+
+@media only screen and (device-width < 430px) {
+    .testimonials-section  {
+        padding: 1rem;
+        padding-bottom: 2rem;
+    }
+
+    .testimonials-title {
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+    .review-cards-container {
+        gap: 1rem;
+    }
+}

@@ -94,3 +94,22 @@ button[type="submit"]:hover,
 button[type="submit"]:focus-visible {
     background: var(--gradient-primary);
 }
+
+@media only screen and (device-width < 430px) {
+    .form-wrapper {
+        margin: 0;
+        padding: 0;
+        justify-items: center;
+    }
+
+    .form-wrapper > form {
+        min-width: auto;
+        width: 100%;
+        padding: 0 1rem 1rem 1rem;
+    }
+
+    .form-wrapper > h2 {
+        padding: 1rem;
+        margin: 0;
+    }
+}

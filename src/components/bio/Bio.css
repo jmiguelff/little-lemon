@@ -8,6 +8,7 @@
     padding: 60px 0;
     gap: 4rem;
     margin-bottom: 3rem;
+    flex-wrap: wrap;
 }
 
 .about-left {
@@ -76,4 +77,28 @@
     max-width: 100%;
     height: auto;
     opacity: 1; /* Set the opacity of the overlay image */
+}
+
+@media only screen and (device-width < 430px) {
+    .about-container {
+        width: auto;
+        max-width: auto;
+        margin: 0;
+        padding: 0 1rem 2rem 1rem;
+        gap: 1rem;
+    }
+
+    .image-container {
+        width: 100%;
+    }
+
+    .background-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .overlay-image {
+        display: none;
+    }
 }

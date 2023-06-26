@@ -64,28 +64,6 @@
     background: var(--gradient-primary);
 }
 
-/*
-.btn {
-    color:black;
-    font-family: 'Karla';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1.125rem;
-
-    background: #F4CE14;
-    border-radius: 1.125rem;
-    border: transparent;
-    padding: 12px 23px;
-}*/
-
-/*
-.btn:hover {
-    cursor: pointer;
-    background-color: #333333;
-    color: #F4CE14;
-    transition: 0.2s;
-}*/
-
 .hero-section-right {
     width: 50%;
     position: relative;
@@ -101,4 +79,29 @@
 
 .hero-image img {
     object-fit: contain;
+}
+
+@media only screen and (device-width < 430px) {
+    .hero-section-container {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .hero-section-left {
+        width: 100%;
+    }
+
+    .hero-content {
+        width: auto;
+        margin-bottom: 1rem;
+    }
+
+    .hero-section-right {
+        display: none;
+    }
+
+    .hero-section-left .btn {
+        margin-bottom: 1rem;
+    }
 }
